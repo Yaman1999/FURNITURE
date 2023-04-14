@@ -1,0 +1,26 @@
+﻿@model FURNITURE.Models.ContactUsZ
+
+@{
+    ViewData["Title"] = "ContactUsViaEmail";
+    Layout = "~/Views/Shared/User_DashBoard_Layout.cshtml";
+}
+
+
+<hr />
+<div class="row">
+    <div class="col-lg-6">
+        <form asp-action="ContactUsViaEmail" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           <div class="form-group">
+                <label asp-for="Message"> <h2>We would love to hear from you </h2></label>
+                <textarea asp-for="Message" cols="150" rows="10" required placeholder="Write your message here"> </textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Send" class="btn btn-primary "  />
+            </div>
+        </form>
+    </div>
+</div>
+
+

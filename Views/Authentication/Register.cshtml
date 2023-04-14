@@ -1,0 +1,166 @@
+﻿@model FURNITURE.Models.UserAccountZ
+
+@{
+    Layout = null;
+}
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="~/LoginAssets/https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/LoginAssets/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="~/LoginAssets/css/owl.carousel.min.css">
+
+    <!-- fevicon -->
+    <link rel="icon" type="image/x-icon" href="~/DashBoardAssets/img/favicon/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/LoginAssets/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="~/LoginAssets/css/style.css">
+
+    <title>Login </title>
+</head>
+<body>
+
+
+    <div class="d-md-flex half">
+        <div class="bg" style="background-image: url('/LoginAssets/images/bg_1.jpg');"></div>
+        <div class="contents">
+
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-12">
+                        <div class="form-block mx-auto">
+                            <div class="text-center mb-5">
+                                <h3 class="text-uppercase" style="color:coral;">Sign up </h3>
+                            </div>
+                            <form asp-action="Register" method="post" enctype="multipart/form-data">
+                                <div class="form-wrapper">
+                                    <label asp-for="Fullname" class="control-label"></label>
+                                    <input asp-for="Fullname" class="form-control" required />
+                                    <span asp-validation-for="Fullname" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-wrapper">
+                                    <label asp-for="Phone" class="control-label"></label>
+                                    <input asp-for="Phone" type="number" class="form-control" required />
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                </div>
+                                <div class="form-wrapper">
+                                    <label asp-for="ImageFile" class="control-label">Image File</label><br />
+                                    <input asp-for="ImageFile" class="form-control" accept="Image/*" required />
+                                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                                </div>
+                                <div class="form-wrapper">
+                                    <label asp-for="Email" class="control-label"></label>
+                                    <input asp-for="Email" type="email" class="form-control" required />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="form-wrapper">
+                                    <label for="username"><i class="control-label"></i> User Name</label>
+                                    <input class="form-control" type="text" name="username" id="username" required />
+                                </div>
+                                <div class="form-wrapper">
+                                    <label for="pass"><i class="control-label"></i> Password</label>
+                                    <input class="form-control" type="password" name="pass" id="pass" required />
+                                </div>
+                                
+                                <input type="submit" value="Register" class="btn btn-block py-2 btn-primary" style="margin-top: 21px;">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="~/LoginAssets/js/jquery-3.3.1.min.js"></script>
+    <script src="~/LoginAssets/js/popper.min.js"></script>
+    <script src="~/LoginAssets/js/bootstrap.min.js"></script>
+    <script src="~/LoginAssets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*
+ <form asp-action="Register">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Fullname" class="control-label"></label>
+                <input asp-for="Fullname" class="form-control" />
+                <span asp-validation-for="Fullname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>*@

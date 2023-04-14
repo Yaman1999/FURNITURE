@@ -1,0 +1,24 @@
+﻿@model FURNITURE.Models.Testimonial
+
+@{
+    ViewData["Title"] = "AddTestimonials";
+    Layout = "~/Views/Shared/User_DashBoard_Layout.cshtml";
+}
+
+<hr />
+<div class="row">
+    <div class="col-lg-6">
+        <form asp-action="AddTestimonials" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+                <label asp-for="Message"> <h2>Submit A Review</h2></label>
+                <textarea asp-for="Message" cols="150" rows="10" required placeholder="Write your message here"> </textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit"  class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<FURNITURE.Models.CategoryZ>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "User_DashBoard_Layout";
+}
+
+
+
+
+
+
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-6 col-lg-4 mb-3">
+            <div class="card h-100">
+               <a asp-controller="UserPages" asp-action="Productss" asp-route-id="@item.Id">
+                <img class="card-img-top" src=@Url.Content("~/Images/" + item.Image) asp-append-version="true" alt="Card image cap">
+               </a>
+                <div class="card-body">
+                    <h2 class="card-title font-bold">@item.Name</h2>
+                    <a asp-controller="UserPages" asp-action="Productss" asp-route-id="@item.Id" class="btn btn-outline-danger">Show all products</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>*@

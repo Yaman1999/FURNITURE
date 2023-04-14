@@ -1,0 +1,55 @@
+﻿@model FURNITURE.Models.UserAccountZ
+
+@{
+    ViewData["Title"] = "AdminProfile";
+    Layout = "~/Views/Shared/Admin_Dashboard_Layout.cshtml";
+}
+
+<h1>AdminProfile</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AdminProfile" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <img src=@Url.Content("~/Images/" + Model.Image) asp-append-version="true" style="border-radius: 70%;;" width="200" height="200" /><br />
+
+            <div class="form-group">
+                <label asp-for="Fullname" class="control-label"></label>
+                <input asp-for="Fullname" class="form-control" required value="@Model.Fullname" />
+                <span asp-validation-for="Fullname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" required value="@Model.Phone" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label">Image File</label><br />
+                <input asp-for="ImageFile" class="form-control" accept="Image/*" value="@Url.Content("~/Images/" + Model.Image)" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" required value="@Model.Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="username"><i class="control-label"></i>User name</label>
+                <input class="form-control" type="text" name="username" id="username" required placeholder="username" value="@ViewBag.username" />
+            </div>
+            <div class="form-group">
+                <label for="pass"><i class="control-label"></i>Password</label>
+                <input class="form-control" type="password" name="pass" id="pass" placeholder="password" required />
+            </div>
+
+
+
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

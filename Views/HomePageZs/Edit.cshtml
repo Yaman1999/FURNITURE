@@ -1,0 +1,66 @@
+﻿@model FURNITURE.Models.HomePageZ
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "Admin_Dashboard_Layout";
+
+}
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label"></label>
+                <input asp-for="ImageFile" class="form-control" accept="Image/*" required />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageFile2" class="control-label"></label>
+                <input asp-for="ImageFile2" class="form-control" accept="Image/*" required />
+                <span asp-validation-for="ImageFile2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageLogo" class="control-label"></label>
+                <input asp-for="ImageLogo" class="form-control" accept="Image/*" required />
+                <span asp-validation-for="ImageLogo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Paragraph" class="control-label"></label>
+                <input asp-for="Paragraph" class="form-control" />
+                <span asp-validation-for="Paragraph" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Text1" class="control-label"></label>
+                <input asp-for="Text1" class="form-control" />
+                <span asp-validation-for="Text1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
